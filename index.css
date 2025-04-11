@@ -1,23 +1,200 @@
-*{
-    padding:0px;
-    margin:0px;
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
-    width:100wv;
-    display:flex;
+body {
+    min-height: 100dvh;
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding:5px 200px 5px;
+    padding: 20px;
     background-color: #ffffff;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
 }
-.wrapper{
-    height: 100%;
-    width:100%;
-    border-radius:10px;
-    border-top: 7px solid black;
+
+.wrapper {
+    width: 75%;
+    max-width: 1200px;
+    border-radius: 10px;
+    border-top: 7px solid #3498db;
     background-color: #ffffff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden; 
+}
+
+/* End of layout design */
+
+.header {
+    min-height: 200px;
+    background-color: white;
+    display: flex;
+    padding:5px;
+    gap:5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.divider{
+    width:100%;
+    height:1px;
+    background-color:grey;
+}
+/* Intro section */
+.intro {
+    min-height: 120px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Photo and signature area */
+.photo {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.image-container {
+    flex-shrink: 0;
+}
+
+.image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3498db;
+}
+
+/* Signature container */
+.signature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Text styling with clamp for responsive sizing */
+.names {
+    font-size: clamp(20px, 2vw, 28px); /* Min 20px, preferred 2vw, max 28px */
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.career-name {
+    font-size: clamp(16px, 1.5vw, 22px); /* Min 16px, preferred 1.5vw, max 22px */
+    color: #666;
+}
+
+/* Contacts area */
+.contacts {
+    width: 50%;
+    min-height: 90px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.about {
+    min-height: 100px;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    border-left: 7px solid #3498db;
+    padding: 20px;
+}
+
+
+/* beginning of body */
+
+.main {
+    min-height: 400px;
+    background-color: gold;
+   
+}
+
+.footer {
+    min-height: 100px;
+    background-color: purple;
+   
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    body {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .header {
+        min-height: 150px;
+    }
+    
+    .main {
+        min-height: 300px;
+    }
+    
+    .footer {
+        min-height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    
+    .wrapper {
+        border-radius: 5px;
+        border-top-width: 5px;
+    }
+    
+    .header, .main, .footer {
+        padding: 15px;
+    }
+}
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .photo, .contacts {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .photo {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo {
+        gap: 10px;
+    }
+    
+    .image {
+        width: 60px;
+        height: 60px;
+    }
 }
