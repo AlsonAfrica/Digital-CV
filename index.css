@@ -53,6 +53,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    border-style: none;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -63,6 +64,7 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 20px;
+    
 }
 
 .image-container {
@@ -86,14 +88,14 @@ body {
 
 /* Text styling with clamp for responsive sizing */
 .names {
-    font-size: clamp(20px, 2vw, 28px); /* Min 20px, preferred 2vw, max 28px */
+    font-size: clamp(20px, 2vw, 28px); 
     font-weight: 600;
     color: #333;
     margin-bottom: 5px;
 }
 
 .career-name {
-    font-size: clamp(16px, 1.5vw, 22px); /* Min 16px, preferred 1.5vw, max 22px */
+    font-size: clamp(16px, 1.5vw, 22px); 
     color: #666;
 }
 
@@ -105,7 +107,11 @@ body {
     border-radius: 8px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding:20px;
+}
+.list{
+    list-style-type: none;
 }
 
 
@@ -118,7 +124,23 @@ body {
     padding: 20px;
 }
 
-
+.email,.phone,
+.location,
+.github,
+.linkedin{
+      display: flex;
+      flex-direction:row;
+      align-items: center;
+      gap:10px;
+}
+a{
+    color:black;
+    text-decoration: none;
+    font-size: clamp(10px, 1.5vw, 16px); 
+}
+a:hover{
+    color:#3498db;
+}
 /* beginning of body */
 
 .main {
