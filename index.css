@@ -174,12 +174,12 @@ a:hover{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     
 }
-h2 {
+/* h2 {
     margin-top: 0;
     border-bottom: 2px solid #f0c929;
     padding-bottom: 8px;
     color: #333;
-}
+} */
 
 .experience-item {
     position: relative;
@@ -207,6 +207,9 @@ h2 {
     border-left: 4px solid #f0c929;
     border-radius: 0 5px 5px 0;
 }
+.experience-details:hover{
+    border-left: 4px solid black;
+}
 
 .experience-details ul {
     padding-left: 20px;
@@ -216,14 +219,192 @@ h2 {
     margin-bottom: 10px;
     line-height: 1.6;
 }
+h2 {
+    margin-top: 0;
+    border-bottom: 2px solid black;
+    padding-bottom: 8px;
+    color: grey;
+}
+
+.experience-item, .project-item {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.experience-date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: gray;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.experience-company, .project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+.experience-details, .project-details {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 4px solid #f0c929;
+    border-radius: 0 5px 5px 0;
+}
+
+.experience-details ul, .project-details ul {
+    padding-left: 20px;
+}
+
+.experience-details li, .project-details li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.github-link {
+    display: inline-block;
+    margin: 5px 0 10px;
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}
+.experience-item, .project-item, .education-item {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.experience-date, .education-date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color:grey;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.experience-company, .project-title, .education-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+.experience-details, .project-details {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 4px solid #3498db;
+    border-radius: 0 5px 5px 0;
+}
+
+.experience-details ul, .project-details ul {
+    padding-left: 20px;
+}
+
+.experience-details li, .project-details li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.github-link {
+    display: inline-block;
+    margin: 5px 0 10px;
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}
+
+.education-institution {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 5px;
+}
 
 .footer {
     min-height: 100px;
-    background-color: purple;
-   
+    background-color: white;
+    padding: 20px;
+    color: grey;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .skill-category {
+    flex: 1;
+    min-width: 150px;
+    position: relative;
+  }
+  
+  .skill-category h3 {
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .skill-category h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 30px;
+    height: 3px;
+    background-color: grey;
+  }
+  
+  .skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .skill-list li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+    transition: transform 0.2s;
+  }
+  
+  .skill-list li:before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: grey;
+  }
+  
+  .skill-list li:hover {
+    transform: translateX(5px);
+  }
+  
+ 
+  
+  @media (max-width: 768px) {
+    .skills-container {
+      flex-direction: column;
+    }
+    
+    .skill-category {
+      margin-bottom: 20px;
+    }
 }
 
 /* Media Queries for Responsiveness */
+
 @media (max-width: 1200px) {
     body {
         padding: 15px;
