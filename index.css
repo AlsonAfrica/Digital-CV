@@ -153,12 +153,68 @@ a{
 a:hover{
     color:#3498db;
 }
+
+
 /* beginning of body */
 
 .main {
     min-height: 400px;
-    background-color: gold;
+    background-color: white;
+    padding:5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    
+}
+.main-containers {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #f0c929;
+    padding-bottom: 8px;
+    color: #333;
+}
+
+.experience-item {
+    position: relative;
+}
+
+.experience-date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f0c929;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.experience-company {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+.experience-details {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 4px solid #f0c929;
+    border-radius: 0 5px 5px 0;
+}
+
+.experience-details ul {
+    padding-left: 20px;
+}
+
+.experience-details li {
+    margin-bottom: 10px;
+    line-height: 1.6;
 }
 
 .footer {
